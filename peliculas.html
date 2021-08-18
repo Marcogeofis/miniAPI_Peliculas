@@ -6,19 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>miniAPI | Analizador de Películas vs plataformas de Streaming</title>
     <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+HK:wght@500&display=swap" rel="stylesheet">
+
 </head>
 <body>
     
     <header>
-        <figure>
-            <img src="" alt="Logo de aplicación">
-        </figure>
         <h1> Analizador</h1>
     </header>
     <main>
-        <p>El Analizador nos ayudara a encontrar que es más economico pagar por el cine de preferencia 
-            ó pagar por la plataforma de streaming de preferencia</p>
-    
+        <p class="Intro__title">Analizaremos que es más económico ir al cíne de preferencia 
+            0 pagar por la plataforma de streaming de preferencia</p>
         <section>
             <div>
                 <div class="graph_cine">
@@ -52,7 +50,7 @@
                         renderCharts()
                     </script>    
                 </div>
-                <p>Costos base de los Cínes en México.</p>
+                <p class="description_graph_cine">Costos base de los Cínes en México.</p>
             </div>
             <div>
                 <div>
@@ -86,25 +84,25 @@
                             }
                             renderCharts()
                         </script> 
-                <p>Costos  base de las plataformas de streaming más populares en México.</p>
+                <p class="description_graph_streaming">Costos  base de las plataformas de streaming más populares en México.</p>
             </div>
         </section>    
         <section>
-            <h3> ¿Cíne o plataformas de streaming?</h3>
-            <p>Por favor responde las preguntas aquí abajo. </p>
+            <h3 class="subtitle_h3"> ¿Cíne o plataformas de streaming?</h3>
+            <p class="questions">Por favor responde las preguntas aquí abajo. </p>
             <div>
                 <header class="header__padre--section" id="cine">
                     <h4>Cine</h4>
                 </header>
                 <form action="">
-                <label class="Q&A_cine" for="Input">¿Cuántas veces vas al cíne al mes?</label>
-                <input type="number">
-                <label class="Q&A_cine" for="Input">¿Qué cíne te gusta ir más?</label>
-                <input type="number">
-                <label class="Q&A_cine" for="Input">¿Qué cíne preferirias por su costo?</label>
-                <input type="number">
-                <label class="Q&A_cine" for="Input">¿Cuanto inviertes al ir al cíne por lo menos dos personas?</label>
-                <input type="number">
+                    <label class="Q&A_cine" for="Input">¿Cuántas veces vas al cíne al mes?</label>
+                    <input type="number">
+                    <label class="Q&A_cine" for="Input">¿Qué cíne te gusta ir más?</label>
+                    <input type="number">
+                    <label class="Q&A_cine" for="Input">¿Qué cíne preferirias por su costo?</label>
+                    <input type="number">
+                    <label class="Q&A_cine" for="Input">¿Cuanto inviertes al ir al cíne por lo menos dos personas?</label>
+                    <input type="number">
                 </form>
             </div>
             <div>
@@ -112,14 +110,14 @@
                     <h4>Streaming</h4>
                 </header>
                 <form action="">
-                <label class="Q&A_streaming" for="Input">¿Cuántas peléculas/series ves al mes?</label>
-                <input type="number">
-                <label class="Q&A_streaming" for="Input">¿Qué plataforma te gusta más?</label>
-                <input type="number">
-                <label class="Q&A_streaming" for="Input">¿Qué plataforma preferirias por su costo?</label>
-                <input type="number">
-                <label class="Q&A_streaming" for="Input">¿Cuanto inviertes al ver tus peliculas/series en comestibles?</label>
-                <input type="number">
+                    <label class="Q&A_streaming" for="Input">¿Cuántas peléculas/series ves al mes?</label>
+                    <input type="number">
+                    <label class="Q&A_streaming" for="Input">¿Qué plataforma te gusta más?</label>
+                    <input type="number">
+                    <label class="Q&A_streaming" for="Input">¿Qué plataforma preferirias por su costo?</label>
+                    <input type="number">
+                    <label class="Q&A_streaming" for="Input">¿Cuanto inviertes al ver tus peliculas/series en comestibles?</label>
+                    <input type="number">
                 </form>
             </div>
         </section>
