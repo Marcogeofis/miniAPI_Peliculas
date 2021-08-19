@@ -15,12 +15,12 @@
         <h1> Analizador</h1>
     </header>
     <main class="main">
-        <p class="Intro__title">Analizaremos que es más económico ir al cíne de preferencia 
+        <p class="Intro__title">Analizaremos que es más económico ir al cine de preferencia 
             o pagar por la plataforma de streaming de preferencia</p>
         <section>
             <div>
                 <div class="graph_cine">
-                    <canvas id="chart" width="200" height="200"></canvas>
+                    <canvas id="chart" width="400" height="400"></canvas>
                     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script>
                     <script type="module">
                         import data from './graph_cine.js'
@@ -37,6 +37,15 @@
                                             {
                                                 label: 'Cines',
                                                 data: Cinemas.map(item => item.costo),
+                                                backgroundColor: [
+                                                    'rgba(255, 99, 132, 0.2)',
+                                                    'rgba(255, 159, 64, 0.2)',
+                                                ],
+                                                borderColor: [
+                                                    'rgb(255, 99, 132)',
+                                                    'rgb(255, 159, 64)',
+                                                ],
+                                                borderWidth: 1
                                             },
                                             
                                         ]
@@ -72,6 +81,23 @@
                                                 {
                                                     label: 'Streaming',
                                                     data: streaming.map(item => item.costo),
+                                                    backgroundColor: [
+                                                        'rgba(255, 205, 86, 0.2)',
+                                                        'rgba(75, 192, 192, 0.2)',
+                                                        'rgba(54, 162, 235, 0.2)',
+                                                        'rgba(153, 102, 255, 0.2)',
+                                                        'rgba(201, 203, 207, 0.2)',
+                                                        'rgba(255, 99, 132, 0.2)'
+                                                    ],
+                                                    borderColor: [
+                                                        'rgb(255, 205, 86)',
+                                                        'rgb(75, 192, 192)',
+                                                        'rgb(54, 162, 235)',
+                                                        'rgb(153, 102, 255)',
+                                                        'rgb(201, 203, 207)',
+                                                        'rgb(255, 99, 132)'
+                                                    ],
+                                                    borderWidth: 1
                                                 },
                                                 
                                             ]

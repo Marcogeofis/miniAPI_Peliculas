@@ -36,7 +36,7 @@ header h1{
 .description_graph_cine{
     margin-top: 15px;
     text-align: center;
-    font-size: 1.2rem;
+    font-size: 1.4rem;
 }
 .graph_Streaming{
     margin-top: 15px;
@@ -44,7 +44,7 @@ header h1{
 .description_graph_streaming{
     margin-top: 15px;
     text-align: center;
-    font-size: 1.2rem;
+    font-size: 1.4rem;
 }
 .subtitle_h3{
     text-align: center;
@@ -53,7 +53,7 @@ header h1{
 }
 .questions{
     text-align: center;
-    font-size: 1.2rem;   
+    font-size: 1.4rem;   
 }
 .header__padre--section{
     color: #DFEEEA;
@@ -104,7 +104,8 @@ header h1{
     font-size: 2rem;
     font-weight: bold;
     margin-top: 20px;
-    width: 40%;
+    padding: 10px;
+    width: 50%;
     height: 50px;
     box-shadow: rgb(34, 31, 31) 2px 2px 7px; 
 } 
