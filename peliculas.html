@@ -10,13 +10,13 @@
 
 </head>
 <body>
-    
+<script src="./procesa_datos.js"></script>    
     <header>
         <h1> Analizador</h1>
     </header>
-    <main>
+    <main class="main">
         <p class="Intro__title">Analizaremos que es más económico ir al cíne de preferencia 
-            0 pagar por la plataforma de streaming de preferencia</p>
+            o pagar por la plataforma de streaming de preferencia</p>
         <section>
             <div>
                 <div class="graph_cine">
@@ -35,7 +35,7 @@
                                         labels: Cinemas.map(item => item.Cine),
                                         datasets: [
                                             {
-                                                label: 'cines',
+                                                label: 'Cines',
                                                 data: Cinemas.map(item => item.costo),
                                             },
                                             
@@ -50,7 +50,7 @@
                         renderCharts()
                     </script>    
                 </div>
-                <p class="description_graph_cine">Costos base de los Cínes en México.</p>
+                <p class="description_graph_cine">Costos base de los cines en México.</p>
             </div>
             <div>
                 <div>
@@ -87,45 +87,50 @@
                 <p class="description_graph_streaming">Costos  base de las plataformas de streaming más populares en México.</p>
             </div>
         </section>    
-        <section>
-            <h3 class="subtitle_h3"> ¿Cíne o plataformas de streaming?</h3>
+        <section class="container__section2">
+            <h3 class="subtitle_h3"> ¿Cine o plataformas de streaming?</h3>
             <p class="questions">Por favor responde las preguntas aquí abajo. </p>
-            <div>
+            <div class="container__cuestion--cine">
                 <header class="header__padre--section" id="cine">
                     <h4>Cine</h4>
                 </header>
-                <form action="">
-                    <label class="Q&A_cine" for="Input">¿Cuántas veces vas al cíne al mes?</label>
-                    <input type="number">
-                    <label class="Q&A_cine" for="Input">¿Qué cíne te gusta ir más?</label>
-                    <input type="number">
-                    <label class="Q&A_cine" for="Input">¿Qué cíne preferirias por su costo?</label>
-                    <input type="number">
-                    <label class="Q&A_cine" for="Input">¿Cuanto inviertes al ir al cíne por lo menos dos personas?</label>
-                    <input type="number">
+                <form action="" class="formulario">
+                    <label class="labels_cine" for="InputVecesCine">¿Cuántas veces vas al cine al mes?</label>
+                    <input id="InputVecesCine" type="number" class="inputBoxCine">
+                    <label class="labels_cine" for="InputCinePreferido">¿Costo del cine de acuerdo a tu preferencia?</label>
+                    <input id="InputCinePreferido" type="number" class="inputBoxCine">
+                    <label class="labels_cine" for="InputComestibles">¿Cuanto inviertes en el cine, es decir palomitas, refresco etc,?</label>
+                    <input id="InputComestibles" type="number" class="inputBoxCine">
                 </form>
             </div>
             <div>
                 <header class="header__padre--section" id="streaming">
                     <h4>Streaming</h4>
                 </header>
-                <form action="">
-                    <label class="Q&A_streaming" for="Input">¿Cuántas peléculas/series ves al mes?</label>
-                    <input type="number">
-                    <label class="Q&A_streaming" for="Input">¿Qué plataforma te gusta más?</label>
-                    <input type="number">
-                    <label class="Q&A_streaming" for="Input">¿Qué plataforma preferirias por su costo?</label>
-                    <input type="number">
-                    <label class="Q&A_streaming" for="Input">¿Cuanto inviertes al ver tus peliculas/series en comestibles?</label>
-                    <input type="number">
-                </form>
+                <form action="" class="formulario">
+                    <label class="labels_streaming" for="InputPeliculasVistas">¿Cuántas peléculas/series ves al mes?</label>
+                    <input id="InputPeliculasVistas" type="number" class="inputBoxCine">
+                    <label class="labels_streaming" for="InputCostoPlataform">¿Cuánto pagas por tu plataforma favorita?</label>
+                    <input id="InputCostoPlataform" type="number" class="inputBoxCine">
+                    <label class="labels_streaming" for="InputCostoBotanas">¿Cuánto inviertes al ver tus películas/series en botanas?</label>
+                    <input id="InputCostoBotanas"type="number" class="inputBoxCine">
+                </form> 
             </div>
         </section>
+        <section class="section_button">
+            <button class="button_compare" type="button" onclick="analizarCostos()">Analizar costo</button>
+        </section>
+        <section>
+            <div class="section__resultados">
+                <p id="ResultP"></p>
+                <p id="ResultStreamingP"></p>
+                <p id="ResultFinal"></p>
+            </div>
 
-
+        </section>
     </main>
     <footer>
-        <p>footer de miniAPI</p>
+        <p>Desarrollado por Marco Antonio R. C.</p>
     </footer>
 </body>
 </html>
