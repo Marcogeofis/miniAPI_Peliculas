@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>miniAPI | Analizador de Películas vs plataformas de Streaming</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+HK:wght@500&display=swap" rel="stylesheet">
+
+</head>
+<body>
+<script src="./procesa_datos.js"></script>    
+    <header>
+        <h1> Analizador</h1>
+    </header>
+    <main class="main">
+        <p class="Intro__title">Analizaremos que es más económico ir al cine de preferencia 
+            o pagar por la plataforma de streaming de preferencia</p>
+        <section>
+            <div>
+                <div class="graph_cine">
+                    <canvas id="chart" width="400" height="400"></canvas>
+                    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script>
+                    <script type="module">
+                        import data from './graph_cine.js'
+                
+                        function totalCasesCine(ctx){
+                            const { 
+                                Cinemas,
+                            } = data
+                                const chart = new Chart(ctx, {
+                                    type: 'bar',
+                                    data: {
+                                        labels: Cinemas.map(item => item.Cine),
+                                        datasets: [
+                                            {
+                                                label: 'Cines',
+                                                data: Cinemas.map(item => item.costo),
+                                                backgroundColor: [
+                                                    'rgba(255, 99, 132, 0.2)',
+                                                    'rgba(255, 159, 64, 0.2)',
+                                                ],
+                                                borderColor: [
+                                                    'rgb(255, 99, 132)',
+                                                    'rgb(255, 159, 64)',
+                                                ],
+                                                borderWidth: 1
+                                            },
+                                            
+                                        ]
+                                    }
+                                })
+                        }
+                        function renderCharts(){
+                            const ctx = document.querySelector('#chart').getContext('2d')
+                            totalCasesCine(ctx)  
+                        }
+                        renderCharts()
+                    </script>    
+                </div>
+                <p class="description_graph_cine">Costos base de los cines en México.</p>
+            </div>
+            <div>
+                <div>
+                    <div class="graph_Streaming">
+                        <canvas id="chart2" width="200" height="200"></canvas>
+                        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script>
+                        <script type="module">
+                            import data_streaming from './graph_streming.js'
+                    
+                            function totalCasesCine(ctx){
+                                const { 
+                                    streaming,
+                                } = data_streaming
+                                    const chart = new Chart(ctx, {
+                                        type: 'bar',
+                                        data: {
+                                            labels: streaming.map(item => item.plataforma),
+                                            datasets: [
+                                                {
+                                                    label: 'Streaming',
+                                                    data: streaming.map(item => item.costo),
+                                                    backgroundColor: [
+                                                        'rgba(255, 205, 86, 0.2)',
+                                                        'rgba(75, 192, 192, 0.2)',
+                                                        'rgba(54, 162, 235, 0.2)',
+                                                        'rgba(153, 102, 255, 0.2)',
+                                                        'rgba(201, 203, 207, 0.2)',
+                                                        'rgba(255, 99, 132, 0.2)'
+                                                    ],
+                                                    borderColor: [
+                                                        'rgb(255, 205, 86)',
+                                                        'rgb(75, 192, 192)',
+                                                        'rgb(54, 162, 235)',
+                                                        'rgb(153, 102, 255)',
+                                                        'rgb(201, 203, 207)',
+                                                        'rgb(255, 99, 132)'
+                                                    ],
+                                                    borderWidth: 1
+                                                },
+                                                
+                                            ]
+                                        }
+                                    })
+                            }
+                            function renderCharts(){
+                                const ctx = document.querySelector('#chart2').getContext('2d')
+                                totalCasesCine(ctx)  
+                            }
+                            renderCharts()
+                        </script> 
+                <p class="description_graph_streaming">Costos  base de las plataformas de streaming más populares en México.</p>
+            </div>
+        </section>    
+        <section class="container__section2">
+            <h3 class="subtitle_h3"> ¿Cine o plataformas de streaming?</h3>
+            <p class="questions">Por favor responde las preguntas aquí abajo. </p>
+            <div class="container__cuestion--cine">
+                <header class="header__padre--section" id="cine">
+                    <h4>Cine</h4>
+                </header>
+                <form action="" class="formulario">
+                    <label class="labels_cine" for="InputVecesCine">¿Cuántas veces vas al cine al mes?</label>
+                    <input id="InputVecesCine" type="number" class="inputBoxCine">
+                    <label class="labels_cine" for="InputCinePreferido">¿Costo del cine de acuerdo a tu preferencia?</label>
+                    <input id="InputCinePreferido" type="number" class="inputBoxCine">
+                    <label class="labels_cine" for="InputComestibles">¿Cuanto inviertes en el cine, es decir palomitas, refresco etc,?</label>
+                    <input id="InputComestibles" type="number" class="inputBoxCine">
+                </form>
+            </div>
+            <div>
+                <header class="header__padre--section" id="streaming">
+                    <h4>Streaming</h4>
+                </header>
+                <form action="" class="formulario">
+                    <label class="labels_streaming" for="InputPeliculasVistas">¿Cuántas peléculas/series ves al mes?</label>
+                    <input id="InputPeliculasVistas" type="number" class="inputBoxCine">
+                    <label class="labels_streaming" for="InputCostoPlataform">¿Cuánto pagas por tu plataforma favorita?</label>
+                    <input id="InputCostoPlataform" type="number" class="inputBoxCine">
+                    <label class="labels_streaming" for="InputCostoBotanas">¿Cuánto inviertes al ver tus películas/series en botanas?</label>
+                    <input id="InputCostoBotanas"type="number" class="inputBoxCine">
+                </form> 
+            </div>
+        </section>
+        <section class="section_button">
+            <button class="button_compare" type="button" onclick="analizarCostos()">Analizar costo</button>
+        </section>
+        <section>
+            <div class="section__resultados">
+                <p id="ResultP" class="textoResult"></p>
+                <p id="ResultStreamingP" class="textoResult"></p>
+                <p id="ResultFinal" class="textoResult"></p>
+            </div>
+
+        </section>
+    </main>
+    <footer>
+        <p>Desarrollado por Marco Antonio R. C.</p>
+    </footer>
+</body>
+</html>
