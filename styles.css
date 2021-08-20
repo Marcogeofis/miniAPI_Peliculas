@@ -97,28 +97,35 @@ header h1{
     justify-content: center;
 }
 .button_compare{
+    cursor: pointer;
     color: #DFEEEA;
     background-color: rgb(94, 139, 126);
     border-radius: 10px;
     border: none;
     font-size: 2rem;
     font-weight: bold;
-    margin-top: 20px;
+    margin-top: 40px;
     padding: 10px;
     width: 50%;
     height: 50px;
     box-shadow: rgb(34, 31, 31) 2px 2px 7px; 
 } 
+.button_compare:hover{
+    background-color:#DFEEEA;
+    color: #2F5D62;
+}
 .section__resultados{
     display: flex;
     flex-direction: column;
     font-size: 1.5rem;
     color:  #2F5D62;
-    height: 65px;
+    height: 185px;
     margin-top: 20px;
     margin-left: 10px;
 }
-
+.textoResult{
+    padding: 10px;
+}
 footer{
     background-color:  #2F5D62;
     color: #DFEEEA;

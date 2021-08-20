@@ -41,11 +41,11 @@ function analizarCostos(){
 
     // Resultado de los gastos del cine
     const resultP = document.getElementById("ResultP");
-    resultP.innerText = "EL costo Total al mes visitando al cine es de: " + gastoMensualCine;
+    resultP.innerText = "EL costo Total al mes visitando al cine es de: " + gastoMensualCine + " pesos";
 
     // Resultado de los gastos para plataforma de Streaming
     const resultStreamingP = document.getElementById("ResultStreamingP");
-    resultStreamingP.innerText = "EL costo Total al mes por una plataforma de Streaming: " + gastoMensualStreaming;
+    resultStreamingP.innerText = "EL costo Total al mes por una plataforma de Streaming: " + gastoMensualStreaming + " pesos";
     
     // resultado 
     const resultadofinal = document.getElementById("ResultFinal");
