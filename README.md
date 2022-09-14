@@ -1,14 +1,28 @@
-# miniAPI_Peliculas
+# Cinema vs Streaming :mexico:
 
-# Reto hacer una miniAPI de que ves más peliculas en el cine o por streaming
+The pricipal goal for this api is compare what is cheaper going to cinema vs waching streaming. :money_with_wings: :money_with_wings: :money_with_wings:
 
-Requerimientos para la miniAPI:
+### You can watch this interface. 
 
-1.- Permitirle al usuario indicar cuántas películas/series ve la mes
+##### Graph of cost of Streaming's platform.
+  ![grafica](https://i.imgur.com/vxBBK72.png)
+##### Field of cinema. 
+  ![cinema](https://i.imgur.com/OWu7ZZH.png)
+##### Field of streaming.
+  ![streaming](https://i.imgur.com/PqtmuZg.png)
 
-2.- Permitirle al usuario escoger en cuantas distintas plataformas de streaming se pueden ver las 
-películas o series que va a ver.
+### How to use this appi:
 
-3.- Indicarle al usuario qué es más barato: ir al cine o pagar las suscripciones a estas plataformas de streaming
+1 You have to fill all fields.
+2 Next push "Analizar costo" button.
+3 It shows the result about what is cheaper.
 
-https://marcogeofis.github.io/miniAPI_Peliculas/
+If you whant to see [deploy](https://marcogeofis.github.io/miniAPI_Peliculas/). :desktop_computer:
+
+### Tools that I use. :toolbox:
+
+![HTML5](https://img.shields.io/badge/-HTML5-000000?style=flat&logo=html5)
+![CSS3](https://img.shields.io/badge/-CSS3-%231572B6?style=flat-square&logo=css3)
+![JavaScript](https://img.shields.io/badge/-JavaScript-000000?style=flat&logo=javascript)
+
+
