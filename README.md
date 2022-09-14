@@ -13,9 +13,12 @@ The pricipal goal for this api is compare what is cheaper going to cinema vs wac
 
 ### How to use this appi:
 
-1 You have to fill all fields.
-2 Next push "Analizar costo" button.
-3 It shows the result about what is cheaper.
+- You have to fill all fields.
+- Next push "Analizar costo" button.
+- It shows the result about what is cheaper.
+
+### Flowchart 
+![flowchart cinema vs streamin](https://i.imgur.com/KGNdcz6.png)
 
 If you whant to see [deploy](https://marcogeofis.github.io/miniAPI_Peliculas/). :desktop_computer:
 
